@@ -7,15 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class Shop extends Model
 {
 
-    protected $hidden = ["created_at","updated_at"];
+    protected $hidden = ["created_at", "updated_at"];
 
-    public function location(){
+    public function location()
+    {
         return $this->belongsTo(Location::class);
     }
 
-    public function users(){
-        return $this->belongsToMany(User::class)->withPivot("type","timer");
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withPivot("type", "timer");
     }
 
+    public static function nearByLocation()
+    {
 
+    }
 }

@@ -3,15 +3,15 @@
 Route::get("/", "ShopController@index");
 Route::get("home", "ShopController@index");
 //get nearby Shops
-Route::get("shops", "ShopController@nearByShops");
+Route::get("nearbyshops", "ShopController@nearByShops");
 //get preferred Shops
-Route::get("shops", "ShopController@preferredShops");
+Route::get("preferredshops", "ShopController@preferredShops");
 //like a Shop
-Route::post("shops", "ShopController@likeShops");
+Route::post("likeshops", "ShopController@likeShops");
 //dislike Shop
-Route::post("shops", "ShopController@dislikeShops");
+Route::post("dislikeshops", "ShopController@dislikeShops");
 //dislike Shop
-Route::get("shops", "ShopController@deleteShops");
+Route::get("deleteShops", "ShopController@deleteShops");
 
 
 
